@@ -107,7 +107,7 @@
 }
 .banner__offer-item {
   position: relative;
-  color: #ffffff;
+  color: #cbcbcd;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -120,6 +120,11 @@
 .banner__offer-item--selected {
   background-color: #ffffff4d;
   border-color: #ffffff;
+}
+
+.banner__offer-title {
+  color: #ffffff;
+  font-weight: 600;
 }
 
 .banner__offer-badge {
@@ -148,6 +153,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #ffffff;
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
@@ -168,7 +174,6 @@
   border-radius: 100px;
   cursor: pointer;
 }
-
 
 .footer {
   width: 100%;
@@ -224,11 +229,11 @@
     background-image: url("./assets/bg_x3.png");
   }
   .banner__feature-item--1 {
-    background-image: url("./assets/features/feature_3_x3.png");
+    background-image: url("./assets/features/feature_1_x3.png");
   }
 
   .banner__feature-item--2 {
-    background-image: url("./assets/features/feature_3_x3.png");
+    background-image: url("./assets/features/feature_2_x3.png");
   }
 
   .banner__feature-item--3 {

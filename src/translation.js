@@ -35,7 +35,19 @@ function applyTranslations(translations) {
       text = text.replace(/\{\{(\w+)\}\}/g, PRICE_CONFIG[priceKey] || "");
     }
 
+    const styles = window.getComputedStyle(el);
+    const fontSize = parseFloat(styles.fontSize);
+    const lineHeight = parseFloat(styles.lineHeight) || fontSize;
+    const heightBefore = el.offsetHeight;
+
     el.innerHTML = text;
+
+    const heightAfter = el.offsetHeight;
+
+    if (heightAfter > heightBefore && fontSize > 12) {
+      el.style.fontSize = fontSize - 1 + "px";
+      el.style.lineHeight = lineHeight - 1 + "px";
+    }
   });
 }
 
