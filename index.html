@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banner</title>
+    <script type="module" src="./src/translation.js" defer></script>
+    <script type="module" src="./src/hydration.js" defer></script>
+  </head>
+  <body>
+    <div class="app">
+      <div class="banner">
+        <a href="#" class="banner__cross"><img src="/cross.svg" alt="cross icon"/></a>
+        <div class="banner__wrapper">
+          <h1 class="banner__title" data-i18n="Get Unlimited <br>Access">
+            Get Unlimited Access
+          </h1>
+
+          <ul class="banner__feature-list">
+            <li class="banner__feature-item banner__feature-item--1">
+              <p
+                class="banner__feature-text"
+                data-i18n="Unlimited Art <br>Creation"
+              >
+                Unlimited Art <br />Creation
+              </p>
+            </li>
+            <li class="banner__feature-item banner__feature-item--2">
+              <p class="banner__feature-text" data-i18n="Exclusive <br>Styles">
+                Exclusive <br />Styles
+              </p>
+            </li>
+            <li class="banner__feature-item banner__feature-item--3">
+              <p
+                class="banner__feature-text"
+                data-i18n="Magic Avatars <br>With 20% Off"
+              >
+                Magic Avatars <br />With 20% Off
+              </p>
+            </li>
+          </ul>
+
+          <ul class="banner__offer-list">
+            <li class="banner__offer-item">
+              <div class="banner__offer-left">
+                <p class="banner__offer-title" data-i18n="YEARLY ACCESS">
+                  YEARLY ACCESS
+                </p>
+                <p
+                  class="banner__offer-subtext"
+                  data-i18n="Just {{price}} per year"
+                  data-price="yearly_price"
+                >
+                  Just $39.99 per year
+                </p>
+              </div>
+              <div class="banner__offer-right">
+                <p
+                  class="banner__offer-price"
+                  data-i18n="{{price}} <br>per week"
+                  data-price="yearly_week_price"
+                >
+                  $0.48 <br />per week
+                </p>
+              </div>
+              <div class="banner__offer-badge" data-i18n="BEST OFFER">
+                BEST OFFER
+              </div>
+            </li>
+
+            <li class="banner__offer-item banner__offer-item--selected">
+              <div class="banner__offer-left">
+                <p class="banner__offer-title" data-i18n="WEEKLY ACCESS">
+                  WEEKLY ACCESS
+                </p>
+              </div>
+              <div class="banner__offer-right">
+                <p
+                  class="banner__offer-price"
+                  data-i18n="{{price}} <br>per week"
+                  data-price="weekly_price"
+                >
+                  $6.99 <br />per week
+                </p>
+              </div>
+            </li>
+          </ul>
+
+          <button class="banner__button" data-i18n="Continue">Continue</button>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <nav class="footer__navbar">
+          <a href="#" class="footer__nav-link" data-i18n="Terms of Use"
+            >Terms of Use</a
+          >
+          <a href="#" class="footer__nav-link" data-i18n="Privacy Policy"
+            >Privacy Policy</a
+          >
+          <a href="#" class="footer__nav-link" data-i18n="Restore">Restore</a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

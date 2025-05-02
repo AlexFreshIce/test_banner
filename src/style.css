@@ -1,0 +1,237 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  height: 100dvh;
+  width: 100vw;
+  background: url("./assets/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+.banner {
+  position: absolute;
+  height: 100dvh;
+  width: 100vw;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 70%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  z-index: 1;
+  padding-bottom: 56px;
+}
+.banner__cross {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 24px;
+  height: 24px;
+}
+.banner__wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 0 24px;
+}
+
+.banner__title {
+  font-size: 42px;
+  line-height: 46px;
+  color: #ffffff;
+  text-align: center;
+
+  margin-bottom: 16px;
+}
+
+.banner__feature-list {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+  margin-bottom: 26px;
+}
+
+.banner__feature-item {
+  flex: 1 1 0;
+  height: 100%;
+  max-height: 146px;
+  aspect-ratio: 55 / 73;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  padding: 12px 8px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.banner__feature-item--1 {
+  background-image: url("./assets/features/feature_1.png");
+}
+
+.banner__feature-item--2 {
+  background-image: url("./assets/features/feature_2.png");
+}
+
+.banner__feature-item--3 {
+  background-image: url("./assets/features/feature_3.png");
+}
+
+.banner__feature-text {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.banner__offer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.banner__offer-right {
+  display: flex;
+  justify-content: center;
+  min-width: 120px;
+}
+.banner__offer-item {
+  position: relative;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff1a;
+  border-radius: 100px;
+  padding: 9px 24px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.banner__offer-item--selected {
+  background-color: #ffffff4d;
+  border-color: #ffffff;
+}
+
+.banner__offer-badge {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  right: 24px;
+  min-width: 120px;
+  height: 20px;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  background: #bc1fef;
+  background: linear-gradient(
+        90deg,
+        rgba(188, 31, 239, 1) 10%,
+        rgba(0, 53, 255, 1) 100%
+      )
+      padding-box,
+    linear-gradient(
+        270deg,
+        rgba(0, 181, 255, 1) 0%,
+        rgba(99, 42, 247, 1) 50%,
+        rgba(255, 150, 244, 1) 100%
+      )
+      border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.banner__offer-item--selected > .banner__offer-badge {
+  background: #ffffff;
+  color: #141131;
+}
+
+.banner__button {
+  width: 100%;
+  height: 56px;
+  background-color: #ffffff;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+
+.footer {
+  width: 100%;
+  padding: 8px;
+}
+
+.footer__navbar {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 16px;
+}
+
+.footer__nav-link {
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 200;
+  text-decoration: underline;
+}
+
+@media (min-width: 428px) {
+  .banner__title {
+    margin-bottom: 24px;
+  }
+  .banner__feature-list {
+    gap: 4px;
+    margin-bottom: 26px;
+  }
+  .banner__offer-list {
+    margin-bottom: 16px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .app {
+    background-image: url("./assets/bg_x2.png");
+  }
+  .banner__feature-item--1 {
+    background-image: url("./assets/features/feature_1_x2.png");
+  }
+
+  .banner__feature-item--2 {
+    background-image: url("./assets/features/feature_2_x2.png");
+  }
+
+  .banner__feature-item--3 {
+    background-image: url("./assets/features/feature_3_x2.png");
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
+  .app {
+    background-image: url("./assets/bg_x3.png");
+  }
+  .banner__feature-item--1 {
+    background-image: url("./assets/features/feature_3_x3.png");
+  }
+
+  .banner__feature-item--2 {
+    background-image: url("./assets/features/feature_3_x3.png");
+  }
+
+  .banner__feature-item--3 {
+    background-image: url("./assets/features/feature_3_x3.png");
+  }
+}
